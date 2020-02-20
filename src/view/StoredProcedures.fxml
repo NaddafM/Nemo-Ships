@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StoredProceduresController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../style/pics/SQL_96px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox>
+                     <children>
+                        <Label text="Microsoft SQL Management Studio">
+                           <font>
+                              <Font name="Segoe UI Light" size="21.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Stored procedures">
+                           <font>
+                              <Font name="Segoe UI Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <JFXComboBox fx:id="procedureComboBox" focusColor="#532fa9" labelFloat="true" prefHeight="25.0" prefWidth="215.0" promptText="Choose Procedure">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXButton onAction="#showQuery" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #D1C4E9;" text="Show Procedure" textFill="#532fa9">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="50.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <JFXTextArea fx:id="queryBody" focusColor="#532fa9" labelFloat="true" text="select S1.sailingID, CONVERT(char,S1.leavingTime)+''+CONVERT(char,S1.returnTime) As SailingDates&#10;from SailTo ST1 inner join Sailing S1 on ST1.sailingID=S1.sailingID&#10;inner join SeaTransport Stt1 on S1.sailingID=Stt1.seaTransportID&#10;  where (DATEDIFF(day, S1.leavingTime , GETDATE())&lt;=730) and  exists &#10;   ( &#10;       select S2.sailingID&#10;       from SailTo ST2 inner join Sailing S2 on ST2.sailingID=S2.sailingID &#10;       inner join SeaTransport Stt2 on S2.sailingID=Stt2.seaTransportID&#10;       where &#10;          (DATEDIFF(day, S2.leavingTime , GETDATE())&lt;=730) AND &#10;          (S1.sailingID!=S2.sailingID) AND&#10;          (ST1.countryName=ST2.countryName AND ST1.portName=ST2.portName)AND&#10;    &#10;          ((S1.leavingTime between S2.leavingTime AND S2.returnTime)AND&#10;          (S1.returnTime between S2.leavingTime AND S2.returnTime))&#10;             &#10;   )  &#10;         &#10;order by S1.leavingTime&#10;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </HBox.margin>
+                  </JFXTextArea>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

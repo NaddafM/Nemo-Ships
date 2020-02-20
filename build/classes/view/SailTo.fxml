@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="434.0" prefWidth="723.0" stylesheets="@../style/personStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="sailToTabPane" prefHeight="434.0" prefWidth="384.0">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <tabs>
+            <Tab>
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="164.0">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../style/pics/Europe_100px.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <JFXTextField fx:id="sailNumNonEditTextField" disable="true" editable="false" focusColor="BLACK" minWidth="0.0" text="Sail 320">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="40.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="countryComboBox" focusColor="#911d36" minWidth="0.0" onAction="#fillPorts" prefHeight="25.0" prefWidth="153.0" promptText="Country">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="portComboBox" focusColor="#911d36" layoutX="10.0" layoutY="235.0" minWidth="0.0" prefHeight="25.0" prefWidth="158.0" promptText="Port">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXDatePicker fx:id="arrivalDatePicker" defaultColor="#575757" minWidth="0.0" prefHeight="25.0" prefWidth="179.0" promptText="Arrivale Date">
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="leavingDatePicker" defaultColor="#575757" minWidth="0.0" prefHeight="25.0" prefWidth="173.0" promptText="Leaving Date">
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXDatePicker>
+                        <Region prefHeight="29.0" prefWidth="152.0" />
+                        <JFXButton buttonType="RAISED" minWidth="0.0" onAction="#addSailTo" text="Add">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../style/pics/Positive_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Separator orientation="VERTICAL" prefHeight="200.0">
+         <HBox.margin>
+            <Insets right="10.0" top="10.0" />
+         </HBox.margin>
+      </Separator>
+      <VBox prefHeight="434.0" prefWidth="733.0">
+         <children>
+            <Label fx:id="sailingLabel" text="Cruise 320 Route" textFill="#575757">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="sailToTbl" prefHeight="392.0" prefWidth="479.0">
+              <columns>
+                <TableColumn fx:id="counterCol" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="#" />
+                  <TableColumn fx:id="countryCol" prefWidth="75.0" text="Country" />
+                  <TableColumn fx:id="portCol" prefWidth="75.0" text="Port" />
+                  <TableColumn fx:id="arrivalCol" prefWidth="75.0" text="Arrival" />
+                  <TableColumn fx:id="leavingCol" prefWidth="75.0" text="Leaving" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="507.0" style="-fx-background-color: linear-gradient(to right, #f2709c, #ff9472);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="103.0" layoutY="39.0" prefHeight="500.0" prefWidth="507.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="470.0" prefWidth="242.0">
+               <children>
+                  <Label fx:id="cruiseLabel" text="Cruise 301" textFill="#00000093">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox layoutX="10.0" layoutY="78.0" prefHeight="58.0" prefWidth="241.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Leaving date" textFill="#00000093" />
+                              <Label fx:id="leavingDate" layoutX="10.0" layoutY="10.0" text="27/03/2018" textFill="#00000093">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Return date" textFill="#00000093" />
+                              <Label fx:id="returnDate" layoutX="10.0" layoutY="10.0" text="18/04/2018" textFill="#00000093">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="70.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="68.0" prefHeight="58.0" prefWidth="241.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="ship number" textFill="#00000093" />
+                              <JFXTextField fx:id="shipId" disable="true" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="choose room" textFill="#00000093" />
+                              <JFXComboBox fx:id="roomsComboBox" onAction="#fillRoomData" prefHeight="25.0" prefWidth="85.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Beds" textFill="#00000093" />
+                              <TextField fx:id="beds" disable="true">
+                                 <VBox.margin>
+                                    <Insets right="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Type" textFill="#00000093" />
+                              <TextField fx:id="type" disable="true">
+                                 <VBox.margin>
+                                    <Insets left="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="131.0" layoutY="10.0" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Per night" textFill="#00000093" />
+                              <TextField fx:id="perNight" disable="true">
+                                 <VBox.margin>
+                                    <Insets left="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator opacity="0.2" orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin>
+            </Separator>
+            <VBox alignment="TOP_CENTER" layoutX="146.0" layoutY="10.0" prefHeight="470.0" prefWidth="242.0">
+               <children>
+                  <Label text="Pay invoice" textFill="#00000093">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fitHeight="52.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../style/pics/visa.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="57.0" prefWidth="215.0">
+                           <children>
+                              <Label text="Payment amount" textFill="#00000097" />
+                              <Label fx:id="paymentAmount" layoutX="10.0" layoutY="10.0" textFill="#00000097">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="78.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Name on card" textFill="#00000093" />
+                              <TextField fx:id="nameOnCard" disable="true" text="Sam yoski" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="150.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="61.0" prefWidth="243.0">
+                           <children>
+                              <Label text="Card number" textFill="#00000093" />
+                              <TextField disable="true" prefHeight="25.0" prefWidth="233.0" text="4580 - 3213 - 3983- 3890" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="174.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Expiry day" textFill="#00000093" />
+                              <TextField disable="true" text="07/20">
+                                 <VBox.margin>
+                                    <Insets right="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Security code" textFill="#00000093" />
+                              <TextField disable="true" text="764">
+                                 <VBox.margin>
+                                    <Insets left="2.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="294.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="96.0" prefWidth="248.0">
+                           <children>
+                              <Label text="Zip/postal code" textFill="#00000093" />
+                              <TextField disable="true" text="90120" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" onAction="#buyCruiseOrder" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: #dfe4ea;" text="Pay">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="449.0" layoutY="7.0" onAction="#close" prefHeight="43.0" prefWidth="41.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="39.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../style/pics/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

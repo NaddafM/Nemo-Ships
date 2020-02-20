@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="417.0" prefWidth="276.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="417.0" prefWidth="276.0">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../style/pics/Edit%20Property_96px.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXTextField fx:id="personId" disable="true">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox>
+               <children>
+                  <JFXTextField fx:id="personFirstName" labelFloat="true" prefHeight="25.0" prefWidth="123.0" promptText="First Name">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="personSurName" labelFloat="true" prefHeight="25.0" prefWidth="123.0" promptText="Sur Name" />
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXDatePicker fx:id="personBirthDate" defaultColor="#ff9800" prefHeight="25.0" prefWidth="261.0" promptText="Birth Date">
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" top="25.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="25.0" />
+               </VBox.margin>
+               <children>
+                  <JFXTextField fx:id="personEmail" labelFloat="true" prefHeight="25.0" prefWidth="114.0" promptText="Email">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="emailUrl" prefHeight="25.0" prefWidth="107.0" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="personPhoneNumber" labelFloat="true" layoutX="10.0" layoutY="113.0" promptText="Phone number">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="25.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" onAction="#updatePerson" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: FF9800;" text="Update" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

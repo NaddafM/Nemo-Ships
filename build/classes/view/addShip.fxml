@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddShipController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="112.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../style/pics/Add%20File_96px.png" />
+         </image>
+      </ImageView>
+      <GridPane prefHeight="439.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.33331298828125" minWidth="5.666656494140625" prefWidth="26.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.3333740234375" minWidth="10.0" prefWidth="221.3333740234375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="106.0" minWidth="4.3333740234375" prefWidth="27.6666259765625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="151.66665649414062" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="327.33331298828125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="192.33334350585938" minHeight="10.0" prefHeight="50.66668701171875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="315.0" prefWidth="222.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <JFXTextField fx:id="newShipNumber" focusColor="#43a047" labelFloat="true" promptText="Ship Number" />
+                  <JFXTextField fx:id="newShipName" focusColor="#43a047" labelFloat="true" promptText="Ship Name">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="newShipManufacturedDate" defaultColor="#43a047" prefHeight="25.0" prefWidth="305.0" promptText="Manufacturing Date">
+                     <VBox.margin>
+                        <Insets right="-8.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXDatePicker>
+                  <Label text="Maximum Capacity">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXSlider fx:id="newShipMaxCapacity" max="10000.0" prefHeight="33.0" prefWidth="169.0" showTickLabels="true" value="3400.0">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                  </JFXSlider>
+                  <Label text="Maximum Number Of People">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <JFXSlider fx:id="newShipMaxNumOfPeople" max="10000.0" showTickLabels="true" value="6100.0">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                  </JFXSlider>
+               </children>
+            </VBox>
+            <HBox prefHeight="49.0" prefWidth="222.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton onAction="#closeAddShipPage" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: #cc0000;" text="cancel" textFill="WHITE" />
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#addNewShip" prefHeight="25.0" prefWidth="253.0" style="-fx-background-color: #0E9654;" text="add ship " textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

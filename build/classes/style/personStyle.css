@@ -1,0 +1,49 @@
+.tab-pane {
+    -fx-tab-max-height: 0 ;
+} 
+.tab-pane .tab-header-area {
+    visibility: hidden ;
+}
+.table-view {
+    -fx-base: white;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent derive(-fx-base, 80.0%) transparent;
+}
+
+.table-view.column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 19.0;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: gray;
+    -fx-alignment: center-left;
+    -fx-opacity: 1.0;
+}
+.buyBtn{
+ -fx-graphic: url("/style/pics/buy.png");
+}
+.map{
+	  -fx-graphic: url("/style/pics/glob_15px.png");
+	
+}
+.deleteBtn{
+	  -fx-graphic: url("/style/pics/Delete_15px.png");
+	
+}
+.updateBtn{
+	  -fx-graphic: url("/style/pics/EditProperty_15px.png");
+	
+}
+.view{
+	  -fx-graphic: url("/style/pics/Eye_15px.png");
+	
+}

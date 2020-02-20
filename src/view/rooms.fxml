@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="365.0" prefWidth="609.0" stylesheets="@../style/newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+      <AnchorPane prefHeight="44.0" prefWidth="640.0">
+         <children>
+            <Label layoutX="7.0" layoutY="7.0" prefHeight="27.0" prefWidth="145.0" text="Rooms of ship :" textFill="#000000d1">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="shipIdLabel" layoutX="131.0" layoutY="7.0" prefHeight="27.0" prefWidth="254.0" text="Label" textFill="#000000d1">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+            </Label>
+            <JFXButton alignment="CENTER_RIGHT" buttonType="RAISED" layoutX="502.0" layoutY="7.0" onAction="#openAddRoomPage" prefHeight="27.0" prefWidth="98.0" text="New Room">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../style/pics/Plus_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="roomsTable" prefHeight="314.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="roomIdColumn" prefWidth="70.33334350585938" text="#" />
+            <TableColumn fx:id="bedsColumn" prefWidth="157.6666259765625" text="Beds " />
+            <TableColumn fx:id="typeColumn" prefWidth="156.3333740234375" text="Type" />
+            <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price " />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </TableView>
+      <Separator prefWidth="200.0" />
+  </children>
+</VBox>
