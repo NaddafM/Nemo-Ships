@@ -16,7 +16,8 @@ the go to model/DataBaseConnection and add you sql server user name , password a
 		conn = DriverManager.getConnection(url, userName, password);
 
 	}
-<img src="<img width="936" alt="dashboard" src="https://user-images.githubusercontent.com/57488522/81082810-74c21280-8efc-11ea-8297-ae4156354519.png">
+	
+<img width="936" alt="dashboard" src="https://user-images.githubusercontent.com/57488522/81082810-74c21280-8efc-11ea-8297-ae4156354519.png">
 <img width="925" alt="personUI" src="https://user-images.githubusercontent.com/57488522/81082831-7ab7f380-8efc-11ea-8301-688bc22db115.png">
 <img width="917" alt="AddPersonUI" src="https://user-images.githubusercontent.com/57488522/81082841-7d1a4d80-8efc-11ea-8df3-541be24a6815.png">
 <img width="921" alt="addShipUI" src="https://user-images.githubusercontent.com/57488522/81082846-7e4b7a80-8efc-11ea-9c14-1fc9ed5f431d.png">
