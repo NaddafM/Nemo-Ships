@@ -27,4 +27,4 @@ the go to model/DataBaseConnection and add you sql server user name , password a
 <img width="637" alt="UserUI" src="https://user-images.githubusercontent.com/57488522/81082896-8dcac380-8efc-11ea-8c9c-55c7e90584eb.png">
 <img width="599" alt="UserDashboard" src="https://user-images.githubusercontent.com/57488522/81082897-8dcac380-8efc-11ea-9dd1-a945e6f64796.png">
 <img width="609" alt="PayUI" src="https://user-images.githubusercontent.com/57488522/81082902-8efbf080-8efc-11ea-882f-179bc9f0ebce.png">
-" width="15%"></img> 
+
