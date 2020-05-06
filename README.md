@@ -1,20 +1,13 @@
 # Nemo-Ships
-
 Converting a complicated requirements to an ERD Diagram , Building a database on SQL Server using DDL to match it , 
 Writing DML stored procedures to be used by the application layer to access the data and developing a full featured desktop JAVA application using MVC architecture and DAO design pattern allowing different types of users to view/manipulate the data of the system through a FXML GUI built with scene builder and JavaFX .
-
 admin authentication :
-username :admin
-password: admin
-
+username :admin , password: admin
 user authentication :
-username : # use any person id from the database
-password: abc123
-
+username : # use any person id from the database , password: abc123
 
 in order to use the application you need to import the .bak database file to your SQL Server and 
 then go to model/DataBaseConnection and add your sql server user name , password and url if needed :
-
 
 	public static void initConn() throws Exception {
 
@@ -25,7 +18,6 @@ then go to model/DataBaseConnection and add your sql server user name , password
 		conn = DriverManager.getConnection(url, userName, password);
 
 	}
-	
 <img width="936" alt="dashboard" src="https://user-images.githubusercontent.com/57488522/81082810-74c21280-8efc-11ea-8297-ae4156354519.png">
 <img width="925" alt="personUI" src="https://user-images.githubusercontent.com/57488522/81082831-7ab7f380-8efc-11ea-8301-688bc22db115.png">
 <img width="917" alt="AddPersonUI" src="https://user-images.githubusercontent.com/57488522/81082841-7d1a4d80-8efc-11ea-8df3-541be24a6815.png">
