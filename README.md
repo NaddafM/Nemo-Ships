@@ -1,6 +1,15 @@
 # Nemo-Ships
 
-Converting a complicated riquirments to an ERD Diagram , building a database on SQL Sever using DDL to match it , writing DML stored procedures to be used by the application layer to retrive and manupilate data and developing a full featured desktop JAVA application using MVC arcitecture and DAO design pattern allowing different types of users to view/manuplate the data of the system throw a FXML GUI built with scene builder and JavaFX
+Converting a complicated requirements to an ERD Diagram , Building a database on SQL Server using DDL to match it , 
+Writing DML stored procedures to be used by the application layer to access the data and developing a full featured desktop JAVA application using MVC architecture and DAO design pattern allowing different types of users to view/manipulate the data of the system through a FXML GUI built with scene builder and JavaFX .
+
+admin authentication :
+username :admin
+password: admin
+
+user authentication :
+username : # use any person id from the database
+password: abc123
 
 
 in order to use the application you need to import the .bak database file to your SQL Server and 
