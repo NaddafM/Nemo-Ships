@@ -1,6 +1,7 @@
 # Nemo-Ships
 Converting a complicated requirements to an ERD Diagram , Building a database on SQL Server using DDL to match it , 
 Writing DML stored procedures to be used by the application layer to access the data and developing a full featured desktop JAVA application using MVC architecture and DAO design pattern allowing different types of users to view/manipulate the data of the system through a FXML GUI built with scene builder and JavaFX .
+
 admin authentication :
 username :admin , password: admin
 user authentication :
