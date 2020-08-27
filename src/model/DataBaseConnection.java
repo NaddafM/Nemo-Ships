@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 
 public class DataBaseConnection {
 
-	protected DriverManager dm;
 	public static Connection conn;
 
 	public static void initConn() throws Exception {
